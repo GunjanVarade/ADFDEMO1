@@ -3,6 +3,36 @@
 	"properties": {
 		"activities": [
 			{
+        pipelinefordataflow
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "DataflowPipeline",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-09-15T13:31:37Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+=======
 				"name": "Wait1",
 				"type": "Wait",
 				"dependsOn": [],
@@ -14,4 +44,5 @@
 		],
 		"annotations": []
 	}
+main
 }
